@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
@@ -131,6 +135,38 @@
   display: none;
 }
 
+.scroll-up-btn {
+  position: fixed;
+  width: 40px;
+  height: 42px;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 50px;
+  color: #fff;
+  background: #00804b;
+  border: 1px solid #202523;
+  border-radius: 5px;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.scroll-up-btn:hover {
+  color: #00804b;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.scroll-up-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
+
 /*..Todos os Codigos Similares..*/
 section {
   padding: 100px 0;
@@ -170,13 +206,17 @@ section .title::after {
 
 .about,
 .services,
-.skills {
+.skills,
+.teams,
+.contact,
+footer {
   font-family: 'Roboto', sans-serif;
 }
 
 .about .about-content,
 .services .serv-content,
-.skills .skills-content {
+.skills .skills-content,
+.contact .contact-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -192,19 +232,19 @@ section .title::after {
   width: 45%;
 }
 
-.about .about-content .right {
+.about .about-content .rigth {
   width: 55%;
 }
 
-.about .about-content .right .text span {
+.about .about-content .rigth .text span {
   color: #00804b;
 }
 
-.about .about-content .right p {
+.about .about-content .rigth p {
   text-align: justify;
 }
 
-.about .about-content .right a {
+.about .about-content .rigth a {
   display: inline-block;
   background: #00804b;
   color: #fff;
@@ -217,12 +257,12 @@ section .title::after {
   transition: all 0.3s ease;
 }
 
-.about .about-content .right a:hover {
+.about .about-content .rigth a:hover {
   color: #00804b;
   background: none;
 }
 
-.about .about-content .right .text {
+.about .about-content .rigth .text {
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -239,12 +279,14 @@ section .title::after {
 
 
 /*..Sessão...Serviços */
-.services {
+.services,
+.teams {
   background: #111;
   color: #fff;
 }
 
-.services .title::before {
+.services .title::before,
+.teams .title::before {
   background: #fff;
 }
 
@@ -300,6 +342,302 @@ section .title::after {
 .skills .skills-content .column {
   width: calc(50% - 30px);
 }
+
+.skills .skills-content .left .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+  text-align: justify;
+}
+
+.skills .skills-content .left a {
+  display: inline-block;
+  background: #00804b;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 25px;
+  border-radius: 6px;
+  border: 2px solid #00804b;
+  transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover {
+  color: #00804b;
+  background: none;
+}
+
+.skills .skills-content .rigth .bars {
+  margin-bottom: 15px;
+}
+
+.skills .skills-content .rigth .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .rigth span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.skills .skills-content .rigth .line {
+  width: 100%;
+  height: 5px;
+  background: #ccc;
+  position: relative;
+  border-radius: 2px;
+}
+
+.skills .skills-content .rigth .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #00804b;
+}
+
+.skills .skills-content .rigth .html::before {
+  width: 75%;
+}
+
+.skills .skills-content .rigth .css::before {
+  width: 60%;
+}
+
+
+.skills .skills-content .rigth .js::before {
+  width: 85%;
+}
+
+
+.skills .skills-content .rigth .php::before {
+  width: 90%;
+}
+
+
+.skills .skills-content .rigth .mysql::before {
+  width: 55%;
+}
+
+
+/*..Sessão...Equipe */
+
+
+.teams .title::after {
+  background: #111;
+  content: "Especializada";
+}
+
+.teams .carousel .card {
+  background: #222;
+  padding: 25px 35px;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.teams .carousel .card:hover {
+  background: #00804b;
+}
+
+.teams .carousel .card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00804b;
+  transition: all 0.5s ease;
+}
+
+.teams .carousel .card:hover img {
+  border: 4px solid #222;
+}
+
+.teams .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.teams .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  width: 14px;
+  height: 14px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #00804b !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 15px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #00804b !important;
+}
+
+
+/*..Sessão...Contato */
+.contact .title::after {
+  content: "Fale Conosco";
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact-content {
+  align-items: flex-start;
+}
+
+.contact .contact-content .left p {
+  text-align: justify;
+}
+
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left .icons {
+  margin: 100px 0;
+}
+
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+
+.contact .contact-content .row .info .head {
+  font-weight: 500;
+}
+
+.contact .contact-content .row .info .sub-title {
+  color: #333;
+}
+
+.contact .contact-content .row ion-icon {
+  font-size: 25px;
+  color: #00804b;
+}
+
+.contact .rigth form .fields {
+  display: flex;
+}
+
+.contact .rigth form .fields,
+.contact .rigth form .fields .field {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+.contact .rigth form .fields input,
+.contact .rigth form .textarea textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact .rigth form .name {
+  margin-right: 10px;
+}
+
+
+.contact .rigth form .email {
+  margin-right: 10px;
+}
+
+.contact .rigth form .textarea {
+  width: 100%;
+  height: 80px;
+}
+
+.contact .rigth form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .rigth form .button-submit {
+  width: 170px;
+  height: 47px;
+}
+
+.contact .rigth form .button-submit button {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  border: 2px solid #00804b;
+  background: #00804b;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact .rigth form .button-submit button:hover {
+  color: #00804b;
+  background: none;
+}
+
+
+/*..Sessão...Footer */
+footer {
+  padding: 20px 23px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+footer span a {
+  color: #00804b;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+
+
 
 
 
@@ -392,13 +730,19 @@ section .title::after {
     margin: 0 auto 60px;
   }
 
-  .about .about-content .right {
+  .about .about-content .rigth {
     flex: 100%;
   }
 
   .services .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+
+  .skills .skills-content .column,
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 35px;
   }
 }
 

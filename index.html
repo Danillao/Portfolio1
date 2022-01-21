@@ -6,21 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Front | Portfolio</title>
   <!--CSS-->
-  <link rel="stylesheet" href="css/style.css">    
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>    
 </head>
 
 <body>
+  <!--Botao para o topo-->
+  <div class="scroll-up-btn">
+   <ion-icon name="chevron-up-outline"></ion-icon>
+  </div>
   <!--Topo.inicio-->
   <div class="navbar">
     <div class="max-width">
       <div class="logo"><a href="#">Port<span>fólio</span></a></div>
       <ul class="menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Especialidade</a></li>
-        <li><a href="#">Equipe</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#skills">Especialidade</a></li>
+        <li><a href="#teams">Equipe</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
 
       <div class="menu-btn">
@@ -36,7 +41,7 @@
       <div class="home-content">
         <div class="text-1">Ola, meu nome é</div>
         <div class="text-2">Danillo Lima</div>
-        <div class="text-3">eu sou <span>Desenvolvedor</span></div>
+        <div class="text-3">eu sou <span class="typing"></span></div>
         <a href="#">Contratar-me</a>
       </div>
     </div>
@@ -51,7 +56,7 @@
         <div class="column left">
           <img src="images/profile-1.jpeg" alt="">
         </div>
-        <div class="column right">
+        <div class="column rigth">
           <div class="text">Sou Danillo e sou <span>Developer</span></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed libero placerat nisl malesuada laoreet. Quisque sed ante vulputate, mattis arcu ac, gravida lorem. Ut nunc dui, fringilla quis diam semper, vehicula mollis tortor. Fusce elementum velit ex, at elementum arcu dictum sed. Nulla accumsan accumsan sapien, vitae malesuada neque consequat eu. Aenean in turpis non nisl rhoncus ornare at sit amet felis. Duis faucibus dapibus tristique. Nam ex tellus, lacinia accumsan dui in, scelerisque dictum leo. Vivamus semper velit a sapien malesuada, at elementum purus mattis. Quisque dignissim ligula ut libero pellentesque, vel fringilla justo pharetra. Nunc imperdiet leo sit amet lacus consequat aliquet. Nunc ac ante ultrices dolor dictum pretium.</p>
           <a href="#">Download CV</a>
@@ -101,30 +106,44 @@
         <div class="column left">
           <div class="text">Minhas Habilidades criativas e experiencias</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde autem iusto alias, quae perferendis vel rem earum, esse a tempore eos ad, consectetur repellendus. Voluptatibus dolorum architecto recusandae quibusdam et nobis laboriosam eum aspernatur at voluptatum, alias, totam unde repellendus provident vero adipisci, reprehenderit assumenda rerum atque quisquam corrupti beatae. Vitae amet, molestias eum molestiae corrupti veniam aliquam ipsum in.</p>
+          <a href="#">Mais Informações</a>
         </div>
 
-        <div class="column right">
+        <div class="column rigth">
           <div class="bars">
             <div class="info">
               <span>HTML</span>
               <span>75%</span>
             </div>
+            <div class="line html"></div>
+          </div>
+          <div class="bars">
             <div class="info">
               <span>CSS</span>
               <span>60%</span>
             </div>
+            <div class="line css"></div>
+          </div>
+          <div class="bars">
             <div class="info">
               <span>JavaScript</span>
-              <span>80%</span>
+              <span>85%</span>
             </div>
+            <div class="line js"></div>
+          </div>
+          <div class="bars">
             <div class="info">
               <span>PHP</span>
-              <span>93%</span>
+              <span>90%</span>
             </div>
+            <div class="line php"></div>
+          </div>
+           <div class="bars">
             <div class="info">
               <span>MySQL</span>
-              <span>70%</span>
+              <span>55%</span>
             </div>
+            <div class="line mysql"></div>
           </div>
         </div>
       </div>
@@ -132,11 +151,134 @@
   </section>
 
 
+  <!--sessão.equipe-->
+  <section class="teams" id="teams">
+    <div class="max-width">
+      <h2 class="title">Minha Equipe</h2>
+
+      <div class="carousel owl-carousel">
+        <div class="card">
+          <div class="box">
+            <img src="images/profile-1.jpeg" alt="">
+            <div class="text">Danillao</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laborum.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <img src="images/profile-2.jpeg" alt="">
+            <div class="text">Gustavin peito de pombo</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laborum.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <img src="images/profile-3.jpeg" alt="">
+            <div class="text">Laudete</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laborum.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <img src="images/profile-4.jpeg" alt="">
+            <div class="text">Hector Boquilha</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laborum.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <img src="images/profile-5.jpeg" alt="">
+            <div class="text">Rosinalva</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--sessão.contato-->
+  <section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title">Contato</h2>
+      <div class="contact-content">
+        <div class="column left">
+          <div class="text">Fale conosco</div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima tempora quidem aspernatur nulla suscipit veritatis! Suscipit ullam molestias non! Soluta laborum blanditiis voluptate eum dignissimos. Alias inventore excepturi voluptas exercitationem natus, voluptatum et aliquam possimus officia, accusantium non. Suscipit ab nesciunt et saepe nostrum aperiam unde quis nisi at reprehenderit.</p>
+        
+          <div class="icons">
+            <div class="row">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <div class="info">
+                <div class="head">Nome</div>
+                <div class="sub-title">Danillo Lima</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <ion-icon name="earth-outline"></ion-icon>
+              <div class="info">
+                <div class="head">Endereço</div>
+                <div class="sub-title">Vitoria da Conquista - BA</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <ion-icon name="mail-unread-outline"></ion-icon>
+              <div class="info">
+                <div class="head">Email</div>
+                <div class="sub-title">DanilloDeveloper@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div> <!--column left-->
+
+        <div class="column rigth">
+          <div class="text">Mensagem</div>
+          <form action="#">
+            <div class="fields">
+              <div class="field name">
+                <input type="text" placeholder="Nome e Sobrenome" required>
+              </div>
+
+               <div class="field email">
+                <input type="email" placeholder="E-mail" required>
+              </div>
+           
+              </div>
+            <div class="field">
+            
+              <div class="field textarea">
+                <textarea cols="30" rows="10" placeholder="Escrever..." required></textarea>
+              </div>
+
+              <div class="button-submit">
+                <button type="submit">Enviar</button>
+              </div>
+            </div>
+           
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!--sessão.footer-->
+   <footer>
+     <span>Criado por <a href="#">Danillo</a> | Todos os direitos reservados 2022</span>
+   </footer>
+
   <!--Ionicons-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/script.js"></script>
+  <!--libs-->
+  <!--Waypoint-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <!--OwlCarousel-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!--Typed-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 </body>
 </html>

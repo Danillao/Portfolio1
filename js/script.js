@@ -5,11 +5,47 @@ $(document).ready(function(){
     } else {
       $('.navbar').removeClass("sticky")
     }
+    if(this.scrollY > 3000){
+      $('.scroll-up-btn').addClass("show");
+    } else {
+      $('.scroll-up-btn').removeClass("show");
+    }
   });
 
-//  if($('.menu-btn').click()){
-//    $('.menu').addClass("active");
-//  } else {
-//    $('.menu').removeClass("active");
-//  }
+  $('.scroll-up-btn').click(function(){
+    $('html').animate({scrollTop: 0});
+  });
+
+  var typed = new Typed(".typing", {
+    strings:["Freelancer", "Desenvolvedor Web", "Desenvolvedor de APP's"],
+    typeSpeed:100,
+    backSpeed:60,
+    loop:true
+  });
+
+  $('.menu-btn').click(function(){
+    $('.navbar .menu').toggleClass("active");
+    $('.menu-btn i').toggleClass("active");
+  });
+
+  $('.carousel').owlCarousel({
+    margin:20,
+    loop:true,
+    autoplayTimeOut:2000,
+    autoplayHoverPauser:true,
+    responsive: {
+      0:{
+        items:1,
+        nav:false
+      },
+      600:{
+        items:2,
+        nav:false
+      },
+      1000:{
+        items:3,
+        nav:false
+      },
+    }
+  });
 });
