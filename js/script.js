@@ -23,6 +23,13 @@ $(document).ready(function(){
     loop:true
   });
 
+   var typed = new Typed(".typing-2", {
+    strings:["Freelancer", "Desenvolvedor Web", "Desenvolvedor de APP's"],
+    typeSpeed:100,
+    backSpeed:60,
+    loop:true
+  });
+
   $('.menu-btn').click(function(){
     $('.navbar .menu').toggleClass("active");
     $('.menu-btn i').toggleClass("active");
